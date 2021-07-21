@@ -1,0 +1,830 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 1060px) {
+  #primary {
+    width: 67%;
+  }
+  #secondary {
+    width: 30%;
+    margin-left: 3%;
+  }
+}
+a {
+  text-decoration: none;
+  color: #2393f0;
+}
+a:hover {
+  color: #ff5b5b;
+}
+
+html {
+  display: flex;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: transparent
+    radial-gradient(closest-side at 50% 50%, #58687e 0%, #39495e 100%) 0% 0%
+    no-repeat padding-box;
+  opacity: 1;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+/*BOTH LOGOS STYLING*/
+.comp__logo {
+  left: 30px;
+  width: 300px;
+  height: 55px;
+  background: #39495e;
+  opacity: 1;
+}
+.high__logo {
+  top: 22px;
+  left: 100px;
+  width: 250px;
+  height: 55px;
+  opacity: 1;
+}
+.spann {
+  position: absolute;
+  left: 49%;
+  transform: translateX(-50%);
+  box-sizing: inherit;
+}
+
+.header {
+  display: flex;
+  top: 16px;
+  left: 86px;
+  width: 233px;
+  height: 52px;
+  text-align: left;
+  font: normal normal bold 39px/52px Futura PT;
+  letter-spacing: 0px;
+  color: #fdfcfc;
+  opacity: 1;
+  display: inline;
+  margin-top: 100px;
+  /*padding: 0 1rem;*/
+}
+.body {
+  margin: 50rem auto;
+  line-height: 1.5;
+  height: 90rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#hlst {
+  position: absolute;
+  left: 6%;
+  top: 10%;
+  transform: translateX(-50%);
+  font: normal normal normal 3rem/32px Ubuntu;
+  letter-spacing: 0px;
+  color: #fdfcfc;
+}
+.table {
+  background: #273d49cc 0% 0% no-repeat padding-box;
+  border-radius: 2.2%;
+  opacity: 1;
+  position: relative;
+  display: block;
+  box-shadow: 0 1rem 5rem 0 rgba(50, 137, 207, 0.2),
+    0.8rem 0.5rem 0.5rem 0 rgba(18, 139, 209, 0.19);
+  gap: 12%;
+  top: 9%;
+  left: 1.8%;
+  right: 1.8%;
+  width: 107%;
+  height: 80%;
+  margin: auto;
+}
+.add_btn {
+  font: normal normal normal 20px/24px Ubuntu;
+  text-align: left;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border: 1px solid #2393f0;
+  border-radius: 10px;
+  opacity: 1;
+  padding: 0.6rem 0.8rem;
+  margin: 5rem 5rem;
+  background: #273d49cc;
+  cursor: pointer;
+  display: inline;
+  transition: all 0.5s ease-in-out;
+}
+.edit_btn {
+  font: normal normal normal 20px/24px Ubuntu;
+  text-align: left;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border: 1px solid #2393f0;
+  border-radius: 10px;
+  opacity: 1;
+  padding: 0.6rem 0.8rem;
+  margin: 5rem -4rem;
+  background: #273d49cc;
+  cursor: pointer;
+  display: inline;
+  transition: all 0.5s ease-in-out;
+}
+.delete_btn {
+  font: normal normal normal 20px/24px Ubuntu;
+  text-align: left;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border: 1px solid #2393f0;
+  border-radius: 10px;
+  opacity: 1;
+  padding: 0.6rem 0.8rem;
+  margin: 5rem 5rem;
+  background: #273d49cc;
+  cursor: pointer;
+  display: inline;
+  transition: all 0.5s ease-in-out;
+}
+.btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.delete_btn:hover {
+  background-color: #df512dcc;
+  box-shadow: 0 4px 8px 0 rgba(153, 28, 28, 0.2),
+    0 6px 20px 0 rgba(180, 16, 16, 0.19);
+}
+.edit_btn:hover {
+  background-color: #0779b6cc;
+  box-shadow: 0 4px 8px 0 rgba(134, 140, 177, 0.2),
+    0 6px 20px 0 rgba(142, 130, 184, 0.19);
+}
+.add_btn:hover {
+  background-color: #0779b6cc;
+  box-shadow: 0 4px 8px 0 rgba(99, 134, 187, 0.2),
+    0 6px 20px 0 rgba(115, 86, 194, 0.19);
+}
+btn input[type='text']:hover {
+  background: #04a2f7cc;
+}
+.btn input[type='text'] {
+  font: normal normal normal 20px/24px Ubuntu;
+  text-align: left;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border: 1px solid #2393f0;
+  border-radius: 10px;
+  opacity: 1;
+  padding: 0.6rem 0.8rem;
+  margin: 5rem 5rem auto -3rem;
+  background: #273d49cc;
+  cursor: pointer;
+  display: inline;
+  transition: all 0.5s ease-in-out;
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(99, 134, 187, 0.2),
+    0 6px 20px 0 rgba(115, 86, 194, 0.19);
+}
+
+.table th {
+  text-align: left;
+  font: normal normal normal 18px/21px Ubuntu;
+  letter-spacing: 0px;
+  color: #97a1a9;
+  text-transform: capitalize;
+  opacity: 1;
+  gap: 12px;
+  top: -25px;
+  left: 1px;
+  right: 20px;
+  width: 1388px;
+  padding: 5px;
+}
+.table td {
+  text-align: left;
+  font: normal normal normal 20px/24px Ubuntu;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  gap: 12px;
+  top: -25px;
+  left: 1px;
+  right: 20px;
+  width: 1388px;
+  padding: 5px;
+}
+.table_div {
+  position: relative;
+  display: inherit;
+
+  gap: 12px;
+  top: -25px;
+  left: 1px;
+  right: 20px;
+  width: 1388px;
+  height: 450px;
+  margin: auto;
+}
+table tr:nth-child(even) {
+  background-color: #283a46;
+}
+.invoice_table {
+  border-spacing: 0 10px;
+}
+/*ADD MODAL*/
+.modal_add {
+  position: absolute;
+  top: 46%;
+  left: 55%;
+
+  transform: translate(-55%, -50%);
+  width: 50%;
+  height: 45%;
+
+  padding: 6rem;
+
+  z-index: 10;
+  background: #2a3e4c 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 24px #00000029;
+  border-radius: 6px;
+  opacity: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  z-index: 5;
+}
+.close-modal {
+  position: absolute;
+  top: -0.9rem;
+  left: 79rem;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.5s ease-in-out;
+  display: inline;
+}
+.modal_add .title {
+  left: -3rem;
+  top: -4.4rem;
+  font-size: 10px;
+  font-weight: 200;
+  position: relative;
+  display: inline;
+  text-align: left;
+  font: normal normal normal 18px/32px Ubuntu;
+  letter-spacing: 0px;
+  color: #ffffff;
+
+  opacity: 1;
+}
+.modal_add .title::after {
+  content: '';
+  position: absolute;
+  left: -2.3rem;
+  bottom: -4rem;
+  height: 3px;
+  width: 850px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #319ae0, #2f43b9);
+}
+.modal_add form .add_details_left {
+  display: flex;
+  position: absolute;
+  left: 40px;
+  right: 50%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.modal_add form .add_details_right {
+  display: flex;
+  position: absolute;
+  right: 2px;
+  left: 58%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .add_details_left .input-box {
+  margin-bottom: 15px;
+
+  width: 37rem;
+  height: 4rem;
+  margin-bottom: 10px;
+}
+form .add_details_right .input-box {
+  margin-bottom: 15px;
+  width: 37rem;
+  height: 4rem;
+  margin-bottom: 10px;
+}
+form .add_details_left .input-box span.details {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: left;
+  font: normal normal normal 20px/24px Ubuntu;
+  letter-spacing: 0.19px;
+  color: #97a1a9;
+  margin-right: 1rem;
+}
+form .add_details_left .input-box span.details::after {
+  content: '*';
+  color: red;
+}
+form .add_details_right .input-box span.details {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: left;
+  font: normal normal normal 20px/24px Ubuntu;
+  letter-spacing: 0.19px;
+  color: #97a1a9;
+  margin-right: 1rem;
+}
+form .add_details_right .input-box span.details::after {
+  content: '*';
+  color: red;
+}
+form .input-box span.details_notes {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-right: 10rem;
+  text-align: left;
+  font: normal normal normal 20px/24px Ubuntu;
+  letter-spacing: 0.19px;
+  color: #97a1a9;
+}
+/*
+.add_details_left {
+  display: flex;
+  align-self: flex-start;
+}
+.add_details_right {
+  display: flex;
+  align-self: flex-end;
+}*/
+.add_details_left .input-box input {
+  height: 35px;
+  position: absolute;
+  justify-content: left;
+  display: inline-block;
+  width: 50%;
+  outline: none;
+  font-size: -5px;
+  right: 2rem;
+  padding-left: 10px;
+  align-self: center;
+  border-bottom-width: 2px;
+
+  background: #283a46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  color: #ffffff;
+}
+.add_details_right .input-box input {
+  height: 35px;
+  position: absolute;
+  justify-content: left;
+  display: inline-block;
+  width: 50%;
+  outline: none;
+  font-size: -5px;
+  right: 5rem;
+  padding-left: 10px;
+  align-self: center;
+  border-bottom-width: 2px;
+
+  background: #283a46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  color: #ffffff;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#note {
+  position: absolute;
+  left: 12rem;
+  width: 52%;
+  height: 13rem;
+  outline: none;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  color: #ffffff;
+  background: #283a46 0% 0% no-repeat padding-box;
+  resize: none;
+  font-size: -5px;
+  padding-left: 10px;
+  border-bottom-width: 2px;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(0.8);
+}
+
+input[type='date']::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+.modal_add .content::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  bottom: 7rem;
+  height: 3px;
+  width: 850px;
+  border-radius: 5px;
+  background: #365e74cc;
+}
+form .add_button input {
+  position: absolute;
+  top: 33rem;
+  left: 74rem;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 77px;
+  height: 35px;
+  background: #14aff1 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+form .add_button input:hover {
+  background: #7258d3 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 8px 0 rgba(99, 134, 187, 0.2),
+    0 6px 20px 0 rgba(115, 86, 194, 0.19);
+}
+form .clear_button input {
+  position: absolute;
+  top: 33rem;
+  left: 64rem;
+  border: 1px solid #14aff1;
+  border-radius: 10px;
+  opacity: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 77px;
+  height: 35px;
+  background: #273d49cc;
+}
+form .clear_button input:hover {
+  background: #e23939cc 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 8px 0 rgba(235, 122, 122, 0.2),
+    0 6px 20px 0 rgba(173, 44, 44, 0.19);
+}
+.cancel_button {
+  position: absolute;
+  top: 33rem;
+  text-align: left;
+  border-radius: 10px;
+  font: normal normal normal 20px/24px Ubuntu;
+  letter-spacing: 0px;
+  color: #14aff1;
+  opacity: 1;
+  background: #273d49cc;
+}
+.hidden {
+  display: none;
+}
+/*EDIT MODAL*/
+.modal_edit {
+  position: absolute;
+  top: 58%;
+  left: 55%;
+
+  transform: translate(-55%, -50%);
+  width: 24%;
+  height: 45%;
+
+  padding: 6rem;
+
+  z-index: 10;
+  background: #2a3e4c 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 24px #00000029;
+  border-radius: 6px;
+  opacity: 1;
+}
+.close-modal-edit {
+  position: absolute;
+  top: -0.2rem;
+  left: 42rem;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.5s ease-in-out;
+  display: inline;
+}
+.modal_edit .edit_title {
+  left: -3rem;
+  top: -3.5rem;
+
+  font-weight: 150;
+  position: relative;
+  display: inline;
+  text-align: left;
+  font: normal normal normal 1vw/3vw Ubuntu;
+  letter-spacing: 0px;
+  color: #ffffff;
+
+  opacity: 1;
+}
+.modal_edit .edit_title::after {
+  content: '';
+  position: absolute;
+  left: -2.3rem;
+  bottom: -5rem;
+  height: 0.2rem;
+  width: 47rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #319ae0, #2f43b9);
+}
+.modal_edit .input-box input {
+  height: 35px;
+  position: absolute;
+  justify-content: left;
+  display: inline-block;
+  width: 50%;
+  outline: none;
+  font-size: -5px;
+  right: 3rem;
+  padding-left: 10px;
+  align-self: center;
+  border-bottom-width: 2px;
+
+  background: #283a46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  color: #ffffff;
+}
+.edit span.edit_amt {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  text-align: left;
+  font: normal normal normal 2rem/2rem Ubuntu;
+  letter-spacing: 0.05rem;
+  color: #97a1a9;
+  margin-right: 2rem;
+  margin-left: -3rem;
+}
+.edit span.edit_notes {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  text-align: left;
+  font: normal normal normal 2rem/2rem Ubuntu;
+  letter-spacing: 0.05rem;
+  color: #97a1a9;
+  margin-right: 2rem;
+  margin-left: -3rem;
+}
+.edit .edit-box input {
+  height: 3.6rem;
+  position: absolute;
+  justify-content: left;
+  display: inline-block;
+  width: 50%;
+  outline: none;
+  font-size: 1.6rem;
+  right: 3rem;
+  top: 10rem;
+  padding-left: 1.8rem;
+  align-self: center;
+  border-bottom-width: 1rem;
+
+  background: #283a46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  color: #ffffff;
+}
+#edit_note {
+  position: absolute;
+  left: 19.3rem;
+  width: 52%;
+  height: 18rem;
+  outline: none;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  color: #ffffff;
+  background: #283a46 0% 0% no-repeat padding-box;
+  resize: none;
+  font-size: -5px;
+  padding-left: 10px;
+  border-bottom-width: 2px;
+}
+form .edit_button input {
+  position: absolute;
+  top: 38rem;
+  left: 38.3rem;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 77px;
+  height: 35px;
+  background: #14aff1 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+form .edit_button input:hover {
+  background: #7258d3 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 8px 0 rgba(99, 134, 187, 0.2),
+    0 6px 20px 0 rgba(115, 86, 194, 0.19);
+}
+form .reset_button input {
+  position: absolute;
+  top: 38rem;
+  left: 28.6rem;
+  border: 1px solid #14aff1;
+  border-radius: 10px;
+  opacity: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 77px;
+  height: 35px;
+  background: #273d49cc;
+}
+form .reset_button input:hover {
+  background: #e23939cc 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 8px 0 rgba(235, 122, 122, 0.2),
+    0 6px 20px 0 rgba(173, 44, 44, 0.19);
+}
+.edit_cancel_button {
+  position: absolute;
+  top: 38.5rem;
+  text-align: left;
+  border-radius: 10px;
+  left: 4rem;
+  font: normal normal normal 20px/24px Ubuntu;
+  letter-spacing: 0px;
+  color: #14aff1;
+  opacity: 1;
+  background: #273d49cc;
+}
+.modal_edit .edit_content::after {
+  content: '';
+  position: absolute;
+  left: 0.3rem;
+  bottom: 9rem;
+  height: 0.1rem;
+  width: 48rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #319ae0, #2f43b9);
+}
+/*DELETE MODAL*/
+.modal_delete {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+
+  transform: translate(-55%, -50%);
+  width: 33%;
+  height: 35%;
+
+  padding: 6rem;
+
+  z-index: 10;
+  background: #2a3e4c 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 24px #00000029;
+  border-radius: 6px;
+  opacity: 1;
+}
+.close-modal-delete {
+  position: absolute;
+  top: -0.2rem;
+  left: 55rem;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.5s ease-in-out;
+  display: inline;
+}
+.modal_delete .delete_title {
+  left: -3rem;
+  top: -3.5rem;
+
+  font-weight: 150;
+  position: relative;
+  display: inline;
+  text-align: left;
+  font: normal normal normal 1vw/3vw Ubuntu;
+  letter-spacing: 0px;
+  color: #ffffff;
+
+  opacity: 1;
+}
+.modal_delete .delete_title::after {
+  content: '';
+  position: absolute;
+  left: -2.3rem;
+  bottom: -5rem;
+  height: 0.2rem;
+  width: 60rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #319ae0, #2f43b9);
+}
+.delete_note {
+  text-align: left;
+  font: normal normal normal 2.3rem/2.3rem Ubuntu;
+  letter-spacing: 0px;
+  color: #c0c6ca;
+  left: 5rem;
+}
+.delete_button {
+  position: absolute;
+  right: 4.5rem;
+  top: 32rem;
+  border: 1px solid #14aff1;
+  border-radius: 10px;
+  opacity: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 7rem;
+  height: 3.2rem;
+  background: #14aff1;
+}
+.delete_button:hover {
+  background: #c41616;
+  border: #c41616;
+  box-shadow: #7a1f1f29;
+}
+.cancel_delete_btn {
+  position: absolute;
+  right: 13.5rem;
+  top: 32rem;
+  border: 1px solid #14aff1;
+  border-radius: 10px;
+  opacity: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 7.2rem;
+  height: 3.2rem;
+  background: #2a3e4c;
+}
+.cancel_delete_btn:hover {
+  background: #2f43b9;
+  border: #2f43b9;
+}
+#tablebody{
+	overflow: scroll;
+}
+.btn-disable{
+	opacity: 0.6;
+	cursor: default;
+	pointer-events: none;
+}

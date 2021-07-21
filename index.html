@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="HandheldFriendly" content="true" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="images\h2h.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>H2HBABBA2668 | Invoice Management System</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        src="images\abbbc.png"
+        alt="Company logo"
+        class="comp__logo"
+        id="logo"
+      />
+      <span class="spann">
+        <img
+          src="images\logo.png"
+          alt="Highradius logo"
+          class="high__logo"
+          id="logo"
+        />
+      </span>
+    </header>
+    <div id="hlst">
+      <h5>Invoice List</h5>
+    </div>
+    <div class="table">
+      <div class="btn">
+        <button class="add_btn ">➕ Add</button>
+        <button class="edit_btn btn-disable">🖊 Edit</button>
+        <button class="delete_btn btn-disable">➖ Delete</button>
+        <input type="text" placeholder="Search by Invoice Number  🔍" />
+      </div>
+      <div class="table_div">
+        <table class="invoice_table" id="invoiceTable">
+          <tr>
+            <th><img src="images/unchecked.jpeg" style="height:1.3rem ;" id='select-all'alt="checkbox"></th>
+            <th>Customer Name</th>
+            <th>Customer#</th>
+            <th>Invoice#</th>
+            <th>Invoice Amount</th>
+            <th>Due Date</th>
+            <th>Predicted Payment Date</th>
+            <th>Notes</th>
+          </tr>
+            <tbody id="tablebody"></tbody>
+        </table>
+      </div>
+      <div class="modal_add hidden">
+        <div class="title">
+          <h2>Add Invoice</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="content">
+          <form action="addData" method="post">
+            <div class="add_details_left">
+              <div class="input-box">
+                <span class="details">Customer Name</span>
+                <input type="text" placeholder="Enter Name" name="Customer Name" required />
+              </div>
+              <div class="input-box">
+                <span class="details">Customer No.</span>
+                <input type="text" placeholder="Enter Cust#" name="Customer No." required />
+              </div>
+              <div class="input-box">
+                <span class="details">Invoice No.</span>
+                <input type="text" placeholder="Enter Inv#" name="Invoice No." required />
+              </div>
+              <div class="input-box">
+                <span class="details">Invoice Amount</span>
+                <input type="text" placeholder="Enter Amt" name="Invoice Amount" required />
+              </div>
+            </div>
+            <div class="add_details_right">
+              <div class="input-box">
+                <span class="details">Due Date</span>
+                <input type="date" placeholder="Insert Date" name="Due Date" required />
+              </div>
+
+              <div class="input-box">
+                <span class="details_notes">Notes</span>
+                <textarea
+                  name="Notes"
+                  placeholder="Insert Notes..."
+                  id="note"
+                  
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="clear_button">
+              <input type="reset" value="Clear" />
+            </div>
+            <div class="add_button">
+              <input type="submit" value="Add" />
+            </div>
+            <div class="cancel_button">
+              <a href="#" type="reset" class="cancel-button">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- EDIT MODAL-->
+    <div class="modal_edit hidden">
+      <div class="edit_title">
+        <h2>Edit Invoice</h2>
+        <button class="close-modal-edit">&times;</button>
+      </div>
+      <div class="edit_content">
+        <form action="editData" class='edit-detail add-detail' method="post">
+          <div class="edit">
+            <div class="edit-box">
+              <span class="edit_amt">Invoice Amount</span>
+              <!--INVOICE AMT-->
+              <input type="text" placeholder="Enter Amt" name="Invoice Amount"/>
+            </div>
+            <input type="text" id="inid" name="inamt" class="hidden" value=''><br>
+            <div>
+              <span class="edit_notes">Notes</span>
+              <!--NOTES-->
+              <textarea
+                name="Notes"
+                placeholder="Insert Notes..."
+                id="edit_note"
+              ></textarea>
+            </div>
+          </div>
+          <!--BUTTONSs-->
+          <div class="edit_button">
+            <input type="submit" value="Save" />
+          </div>
+          <div class="reset_button">
+            <input type="reset" value="Reset" />
+          </div>
+          <div class="edit_cancel_button">
+            <a href="#" type="reset" class="edit_cancel-button">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--DELETE MODAL-->
+    <div class="modal_delete hidden">
+      <div class="delete_title">
+        <h2>Delete Record(s)?</h2>
+        <button class="close-modal-delete">&times;</button>
+      </div>
+      <form action="deleteData" method="post">
+      <p class="delete_note">
+        <span
+          >You'll lose your record(s) after this action. We can't recover them
+          once you delete.<br />
+          <br />
+          <br />
+          Are you sure you want to</span
+        >
+        <span style="color: rgb(238, 42, 42)">permanently delete</span> them?
+      </p>
+      <input type="text" id="inid1" name="inamt1" class="hidden" value=''><br>
+      <div>
+        <button type ="reset" class="cancel_delete_btn">Cancel</button>
+      </div>
+      <div>
+        <button type="submit" class="delete_button">Delete</button>
+      </div>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="scriptUI.js"></script>
+  </body>
+</html>
